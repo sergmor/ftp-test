@@ -1,15 +1,15 @@
 package com.example;
 
-import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPClientConfig;
 import org.apache.commons.net.ftp.FTPReply;
+import org.apache.commons.net.ftp.FTPSClient;
 
 import java.io.IOException;
 
 class Hello {
     public static void main(String[] args) {
 
-        FTPClient ftp = new FTPClient();
+        FTPSClient ftp = new FTPSClient();
         FTPClientConfig config = new FTPClientConfig();
         //config.setXXX(YYY); // change required options
         // for example config.setServerTimeZoneId("Pacific/Pitcairn")
