@@ -21,7 +21,7 @@ class Hello {
 
         Hello sendMyFiles = new Hello();
 
-        sendMyFiles.startFTP("", "upload.txr");
+        sendMyFiles.startFTP("", "upload.txt");
 
     }
 
@@ -50,13 +50,13 @@ class Hello {
 
             //check if the file exists
             String filepath = localDirectory +  fileToFTP;
-
+            System.out.println("will try uploading "+ filepath);
             File file = new File(filepath);
             if (!file.exists())
                 throw new RuntimeException("Error. Local file not found");
 
             //Initializes the file manager
-            System.out.println("will try uploading "+ filepath);
+
             manager.init();
 
             //Setup our SFTP configuration
